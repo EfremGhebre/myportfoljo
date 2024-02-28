@@ -1,0 +1,243 @@
+*{
+  margin: 0px;
+  padding: 0px;    
+  font-family: 'Trebuchet MS';
+  color: aliceblue;
+  box-sizing: border-box;
+ } 
+ .nav {
+  background-color: black;
+  text-align: center; 
+  padding-top: 10px;   
+  } 
+ .nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;   
+  margin: 0 5px; 
+  
+ }
+ .nav li :hover{
+  color: rgba(236, 93, 10, 0.884);    
+  text-transform:uppercase;    
+  transition: 0.5s ease;
+ }
+ .nav li a{
+  text-decoration: none;
+ }
+ .container{
+  display: flex;
+  max-width: auto;
+  padding: 2em; 
+  gap: 2em;
+  min-height: 100vh;  
+  background-image: linear-gradient( black, rgb(110, 11, 11), black);
+ }
+
+ img {
+  width: 80%;
+  height: auto;
+  display: flex;  
+  border-radius: 50px;  
+  margin-top: 100px;  
+  /* border: 10px solid green; */
+ } 
+
+ .description{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  padding-top: 150px;
+  padding-left: 50px;
+  /* border: 10px solid red;   */
+ }
+ .about-me{
+  padding: 25px 80px;
+ }
+ .about-me p{
+  font-size: 1.2em;
+ }
+ .cv-text{
+  display: flex;
+  flex-direction: column;
+  text-align:justify;
+  font-size: 1.2em;
+ }
+ .cv-text h1{
+  color: orangered;
+ }
+ .logo{
+  font-family: 'Rock Salt', cursive;
+  color: orangered;
+  font-weight: bold;
+  font-size:1.5em;
+  padding-left:  20px;
+  cursor: pointer;
+  float: left; 
+ }
+ .logo:hover{
+  transition: 0.5s;
+  font-size: 1.3em;
+ }  
+  span{
+  color: orangered;
+  font-size: 1.3em;
+ }  
+ .material-symbols-outlined{ 
+  font-size: 1.2em;
+  display: block; 
+  padding-top: 50px; 
+ }
+ footer p{
+  background-color:black;    
+  text-align: center;
+  padding: 20px;
+ }
+ .card{
+  display: block;
+  font-size: 1.2em;  
+  border-radius: 50px;
+  margin-top: 20px;
+  padding: 20px;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  
+ }
+ #card1, #card2, #card3{
+  display: none;
+ }
+ #card1:checked ~.content, #card2:checked ~.content, #card3:checked ~.content{
+  display: inline-block;
+ }
+ #card1:checked ~label, #card2:checked ~label, #card3:checked ~label{
+  display: none;;
+ }
+ .content{
+  display: none;
+ } 
+
+label{
+  display: inline-block;
+  height: auto;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
+  font-size: 0.8em;
+  transition: 0.3s ease;
+}
+label:hover{
+  background-color: orangered;  
+}
+#contact{
+  padding-top: 50px;
+}
+#contact .msg{
+  height: 20vh;  
+}
+#contact input{
+  color: black;
+  border: 2px solid red;
+  font-size: 1.3em;
+  border-radius: 20px;
+  padding: 10px;
+  width: 50%;
+  height: 8vh;
+  margin: 10px 0;
+}
+#contact h2{
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+#contact button{
+  border-radius: 20px;
+  width: 20vw;
+  height: 5vh;
+  background-color: transparent;  
+  border: 1px solid red;
+  margin: 20px 0;
+}
+#contact button:hover{
+  background-color: orangered;  
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Media query for devices with a maximum width of 480 pixels (e.g., smartphones) */
+@media all  and (max-width: 600px) {
+  .logo{     
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  .nav li {
+    text-align: center;
+    font-size: 1em;
+    padding: 0px; 
+    width: 80%; 
+    margin-top: 10px;
+   }
+  .container{
+    display: block;
+    max-width: 100%;      
+    min-height: 100vh;  
+    font-size: 0.8em;    
+    text-align: left;
+  } 
+  .container .description{
+    width: 100%;    
+    padding-top: 50px;
+    font-size: 1.5em;
+    padding: 0;
+  }
+  .container img{
+    border-radius: 100px;
+    float: inline-end;
+    width: 30%;
+  }
+  .about-me{
+    font-size: 0.8em;
+    padding: 0;
+  }
+.card{
+  display: block;
+  font-size: 1.1em;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+ }
+ #contact input{
+  color: black;
+  border: 2px solid red;
+  font-size: 1.3em;
+  border-radius: 20px;
+  padding: 10px;
+  width: 80%;
+  height: 8vh;
+  margin: 10px 0;
+}
+#contact button{
+  border-radius: 20px;
+  font-size: 0.8em;
+  width: 30vw;
+  height: 5vh;
+  background-color: transparent;
+ 
+  border: 1px solid red;
+  margin: 20px 0;
+}
+#contact h2{
+  font-size: 1.4em;
+}
+
+
+}
